@@ -1,0 +1,59 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+print("To start the game choose a direction, right or left")
+
+direction = input()
+
+if direction !=  "left":
+  print("Fall into a hole. \nGame Over.")
+else:
+  print("And now, Swim or Wait")
+  direction = input()
+  if direction == "swim":
+    print("Attacked by trout. \nGame Over.")
+  elif direction == "wait":
+    print("Wich door you must go, choose carefully \nRed, Yellow or Blue")
+    direction = input()
+    if direction == "blue":
+      print("You choose the beast path and died by beasts. \nGame Over.")
+    elif direction == "red":
+      print("You died burned by fire into a dark room \nGame Over.")
+    elif direction == "yellow":
+      print("You are lucky, you found the correct path, but you must answer the riddle")
+      print("What has to be broken before you can use it?")
+      riddle = input("Type your answer\n")
+      answer = riddle.lower()
+      if answer == "egg":
+        print("You found my treasure, Good job!")
+      else:
+        print("Try again, its your last chance")
+        riddle = input("Answer again\n")
+        answer = riddle.lower()
+        if riddle == "egg":
+          print("You found my treasure, Good job!")
+        else:
+          print("Game over, you lose!!!")
+    else:
+      print("You have nothing \nGame Over.")
