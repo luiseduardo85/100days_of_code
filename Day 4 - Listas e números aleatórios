@@ -1,0 +1,52 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+
+game_images = [rock, paper, scissors]
+
+rock_paper_scissor = int(input("What do you choose? Type 0 for rock, 1 for paper or 2 for scissors."))
+
+if rock_paper_scissor >= 3 and rock_paper_scissor < 0:
+  print("You tiped a invalid number")
+  
+else:
+  print(game_images[rock_paper_scissor])
+  computer_choice = random.randint(0,2)
+  print("computer choice")
+  print(game_images[computer_choice])
+  if rock_paper_scissor == 0 and computer_choice == 2:
+    print("You Win!")
+  elif computer_choice == 0 and rock_paper_scissor == 2:
+    print("You lose")
+  elif computer_choice > rock_paper_scissor:
+    print("Computer Wins!")
+  elif rock_paper_scissor > computer_choice:
+    print("You Win!")
+  elif rock_paper_scissor == computer_choice:
+    print("Draw")
